@@ -1,0 +1,41 @@
+<!-- {% load static %} -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="{% static 'pdfapp/style.css' %}"> -->
+    <style>h1 {text-align: center;}</style>
+</head>
+<body>
+    <h1>Resume</h1>
+    <b><hr/></b>
+    <h2>{{user_profile.name}}</h2>  
+    <h2>{{user_profile.email}}</h2>
+    <h2>{{user_profile.phone}}</h2>
+    <hr/>
+    <br/>
+    <p>Summary</p>
+    <p>{{user_profile.summary}}</p>
+    <hr/>
+    <p>Skills</p>
+    <p>{{user_profile.skills}}</p>
+    <hr/>
+    <p>Education</p>
+    <ul>
+        <li>School: {{user_profile.school}}</li>
+        <li>{{user_profile.degree}} from {{user_profile.university}}</li>
+
+    </ul>
+    <hr/>
+    <p>Previous Work</p>
+    <p>{{user_profile.previous_work}}</p>
+
+
+    <hr/>
+    <h6>{% now "SHORT_DATETIME_FORMAT" %}</h6>
+
+</body>
+</html>
